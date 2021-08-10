@@ -8,7 +8,6 @@ class Anagram
     def match(array)
     #    binding.pry
         array.filter{|namee| 
-            binding.pry
             namee.chars.sort == @word.chars.sort
         
         }
