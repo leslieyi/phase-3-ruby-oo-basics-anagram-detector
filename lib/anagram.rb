@@ -2,16 +2,16 @@
 require 'pry'
 class Anagram
     attr_accessor :word
-    def initialize(word)
-        @word = word
-    end
-    def broken_word
-        @word.split("").sort
-    end
-    def broken_array(word)
-        word.split("").sort
+    def initialize(name)
+        @word = name
     end
     def match(array)
-        array.select{|word| word.split("").sort == @word.split("").sort}
+    #    binding.pry
+        array.filter{|namee| 
+            binding.pry
+            namee.chars.sort == @word.chars.sort
+        
+        }
     end
+
 end
